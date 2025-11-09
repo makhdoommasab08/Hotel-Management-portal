@@ -1,9 +1,9 @@
+import sys, os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import streamlit as st
 import pandas as pd
 import os, sys
-
-# Fix import path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from utils.data_loader import load_data
 from app.components.cards import render_kpis
 from app.components.charts import render_status_pie, render_occupancy_line, render_prediction

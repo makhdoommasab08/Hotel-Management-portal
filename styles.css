@@ -1,0 +1,126 @@
+/* ---- Header Slideshow ---- */
+.header-slideshow {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  border-bottom: 4px solid rgba(255,255,255,0.2);
+}
+
+.header-slideshow img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: slideShow 36s infinite;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.header-slideshow img:nth-child(1) { animation-delay: 0s; }
+.header-slideshow img:nth-child(2) { animation-delay: 6s; }
+.header-slideshow img:nth-child(3) { animation-delay: 12s; }
+.header-slideshow img:nth-child(4) { animation-delay: 18s; }
+.header-slideshow img:nth-child(5) { animation-delay: 24s; }
+.header-slideshow img:nth-child(6) { animation-delay: 30s; }
+
+@keyframes slideShow {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  25% { opacity: 1; }
+  30% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* ---- Dashboard Body ---- */
+.block-container {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-top: -3rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  color: #fff;
+  z-index: 10;
+  position: relative;
+}
+
+/* ---- Titles ---- */
+.page-title {
+  color: #ffffff;
+  font-size: 2.4rem;
+  text-align: center;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  color: #f0f4f8;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ---- KPI Cards ---- */
+.card {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  text-align: center;
+  transition: all 0.4s ease;
+  color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ---- Buttons ---- */
+.stButton>button {
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 1.3rem;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(14,165,233,0.6);
+  transition: all 0.3s ease-in-out;
+}
+
+.stButton>button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #0ea5e9, #0284c7);
+  box-shadow: 0 0 20px rgba(14,165,233,0.9);
+}
+
+/* ---- Charts ---- */
+div[data-testid="stPlotlyChart"] {
+  border-radius: 16px;
+  background: rgba(255,255,255,0.1);
+  padding: 8px;
+  animation: fadeIn 1s ease-in-out;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.stButton button {
+    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 0 8px rgba(14,165,233,0.6);
+    transition: all 0.3s ease;
+}
+.stButton button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(14,165,233,0.8);
+}

@@ -4,11 +4,11 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import streamlit as st
 import pandas as pd
 import os, sys
-from utils.data_loader import load_data
-from app.components.cards import render_kpis
-from app.components.charts import render_status_pie, render_occupancy_line, render_prediction
-from app.components.sentiment_ui import sentiment_panel
-from app.components.room_status_chart import show_room_status_chart
+from data_loader import load_data
+from cards import render_kpis
+from charts import render_status_pie, render_occupancy_line, render_prediction
+from sentiment_ui import sentiment_panel
+from room_status_chart import show_room_status_chart
 # --- Streamlit Setup ---
 st.set_page_config(page_title="Sapphire Inn", layout="wide")
 import streamlit as st
